@@ -30,7 +30,7 @@ import org.apache.hadoop.fs.FileSystem;
 import org.apache.hadoop.fs.LocalFileSystem;
 import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.mapreduce.Job;
-import org.apache.hadoop.mapreduce.lib.input.CombineTextInputFormat;
+// import org.apache.hadoop.mapreduce.lib.input.CombineTextInputFormat; //https://groups.google.com/d/msg/druid-user/cuR2vBVWrSY/ngXJebt0ivEJ
 import org.apache.hadoop.mapreduce.lib.input.TextInputFormat;
 
 import java.io.File;
@@ -163,7 +163,8 @@ public class JobHelper
     if(indexerConfig.getInputFormatClass() != null) {
       job.setInputFormatClass(indexerConfig.getInputFormatClass());
     } else if (indexerConfig.isCombineText()) {
-      job.setInputFormatClass(CombineTextInputFormat.class);
+      // job.setInputFormatClass(CombineTextInputFormat.class);
+      throw new IllegalStateException("combine text not supported, please see https://groups.google.com/d/msg/druid-user/cuR2vBVWrSY/ngXJebt0ivEJ");
     } else {
       job.setInputFormatClass(TextInputFormat.class);
     }
