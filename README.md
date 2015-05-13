@@ -1,5 +1,11 @@
 [![Build Status](https://travis-ci.org/druid-io/druid.svg?branch=master)](https://travis-ci.org/druid-io/druid) [![Coverage Status](https://coveralls.io/repos/druid-io/druid/badge.svg?branch=master)](https://coveralls.io/r/druid-io/druid?branch=master)
 
+## Banno fork
+
+Currently this fork just changes the hadoop-client dependency in Druid 0.7.1.1 to version 2.0.0-cdh4.4.0 and protobuf-java to 2.4.0a, then changes the Druid version to 0.7.1.1-hadoop-2.0.0-cdh4.4.0.
+
+If changes are made in the future, the `change-version.sh` script is handy to quickly change the Druid version in all pom.xml files. The `build.sh` script shows how to compile Druid, package the .tar.gz and install the Druid extensions into your local Maven repo.
+
 ## Druid
 
 Druid is a distributed, column-oriented, real-time analytics data store
