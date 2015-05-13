@@ -82,7 +82,7 @@
         <module>processing</module>
         <module>server</module>
         <module>services</module>
-        <module>integration-tests</module>
+        <!-- <module>integration-tests</module> -->
         <module>aws-common</module>
         <!-- Non-default modules -->
         <module>extensions/cassandra-storage</module>
