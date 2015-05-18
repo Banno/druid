@@ -26,7 +26,7 @@
     <parent>
         <groupId>io.druid</groupId>
         <artifactId>druid</artifactId>
-        <version>0.7.1.1-hadoop-2.0.0-cdh4.4.0</version>
+        <version>0.7.1.1-hadoop-2.0.0-mr1-cdh4.4.0</version>
     </parent>
 
     <dependencies>
@@ -185,13 +185,13 @@
             <artifactId>easymock</artifactId>
             <scope>test</scope>
         </dependency>
-        <dependency>
+        <!-- <dependency>
             <groupId>io.druid</groupId>
             <artifactId>druid-processing</artifactId>
             <version>${project.parent.version}</version>
             <type>test-jar</type>
             <scope>test</scope>
-        </dependency>
+        </dependency> -->
         <dependency>
             <groupId>org.apache.curator</groupId>
             <artifactId>curator-test</artifactId>
