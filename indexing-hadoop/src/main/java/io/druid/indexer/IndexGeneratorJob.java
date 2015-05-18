@@ -157,6 +157,8 @@ public class IndexGeneratorJob implements Jobby
           String.format("%s-index-generator-%s", config.getDataSource(), config.getIntervals())
       );
 
+      job.setJarByClass(getClass());
+
       job.getConfiguration().set("io.sort.record.percent", "0.23");
 
       JobHelper.injectSystemProperties(job);
